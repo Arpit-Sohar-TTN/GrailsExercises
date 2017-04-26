@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+    <link rel="shortcut icon" href="../resourse/homeLogo.png">
+    <link href="linkSharing.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="linkSharing.js" rel="script">
+</head>
+<body>
+<!--navbar-collapse-responsive-->
+<nav class="navbar navbar-default navbackground">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed makingcircle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img alt="logo" src="../resourse/logo.png" class="logo">
+        </a>
+        <a class="navbar-brand" href="#">
+            Link Sharing
+        </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li class=" glyphicon glyphicon-user center-block pull-right"
+                style="font-size: 2em ; padding-right: 5px;padding-top: 10px"></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false"><span class="caret"></span> &nbsp; User</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-right">
+            <div class="input-group">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default pull-left">
+                            <span class="glyphicon glyphicon-search">
+                                <span class="sr-only">Search</span>
+                            </span>
+                        </button>
+                        <input type="search" class="form-control" name="search" id="search"
+                               style="width: 270px; background-color: #e5e5e5;" placeholder="Search">
+                        <button type="reset" class="btn btn-default ">
+                            <span class="glyphicon glyphicon-remove">
+                                <span class="sr-only">Close</span>
+                            </span>
+                        </button>
+                    </span>
+            </div>
+        </form>
+    </div><!-- /.navbar-collapse -->
+</nav>
+<!--<div class="container-fluid">&lt;!&ndash;container-fluid&ndash;&gt;
+    <div class="row">&lt;!&ndash;main row&ndash;&gt;
+        <div class="col-xs-12 col-md-5">&lt;!&ndash;left column&ndash;&gt;
+            <div class="row">&lt;!&ndash;userPanel&ndash;&gt;
+                <div class="panel panel-default ">&lt;!&ndash;login panel&ndash;&gt;
+                    <div class="panel-body panelBorder">
+                        <div class="col-md-3 col-xs-12">
+                            <img class="img-rounded img-responsive center-block profileImage"
+                                 src="../resourse/profilePic.jpg">
+                        </div>
+                        <div class="col-md-9 col-xs-12 center-block">
+                            <div class="row">&lt;!&ndash;username&ndash;&gt;
+                                <div class="col-xs-6 col-md-6">&lt;!&ndash;username&ndash;&gt;
+                                    <b>Mayank Agnihotri</b> &nbsp;&nbsp;&nbsp;<i>@Agni</i>
+                                </div>&lt;!&ndash;./username&ndash;&gt;
+                                <div class="col-xs-6 col-md-6">&lt;!&ndash;competency&ndash;&gt;
+                                    <a href="#" class="pull-right mycompetency">JVM</a>
+                                </div>&lt;!&ndash;./competency&ndash;&gt;
+                            </div>&lt;!&ndash;/.username&ndash;&gt;
+                            <div class="row myContent">&lt;!&ndash;content&ndash;&gt;
+                                This is a panel consist of recent shares which will be used thoughout the applic
+                                This is a panel consist of recent shares which will be used thoughout the applic
+                                This is a panel consist of recent shares which will be used thoughout the applic
+                            </div>&lt;!&ndash;/.content&ndash;&gt;
+                            <div class="row">&lt;!&ndash;import link&ndash;&gt;
+                                <div class="col-xs-6 col-md-6">&lt;!&ndash;socialConnect&ndash;&gt;
+                                    <a class="btn btn-social-icon btn-facebook">
+                                        <span class="fa fa-facebook"></span>
+                                    </a>
+                                    <a class="btn btn-social-icon btn-twitter">
+                                        <span class="fa fa-twitter"></span>
+                                    </a>
+                                    <a class="btn btn-social-icon btn-google">
+                                        <span class="fa fa-google-plus"></span>
+                                    </a>
+                                </div>&lt;!&ndash;./socialConnect&ndash;&gt;
+                                <div class="col-xs-6 col-md-6">&lt;!&ndash;viewPost&ndash;&gt;
+                                    <a href="#" class="pull-right viewPost"> View Post</a>
+                                </div>&lt;!&ndash;./viewPost&ndash;&gt;
+                            </div>&lt;!&ndash;/.import link&ndash;&gt;
+                        </div>
+                    </div>
+                </div>&lt;!&ndash;/.Login panel&ndash;&gt;
+                </div>
+            </div>&lt;!&ndash;/.userPanel&ndash;&gt;
+            <div class="row">&lt;!&ndash;topics&ndash;&gt;
+
+            </div>&lt;!&ndash;/.topics&ndash;&gt;
+        </div>&lt;!&ndash;/.left column&ndash;&gt;
+        <div class="col-xs-7 col-md-7">&lt;!&ndash;right column&ndash;&gt;
+
+        </div>&lt;!&ndash;/.right column&ndash;&gt;
+    </div>&lt;!&ndash;/.main row&ndash;&gt;
+</div>&lt;!&ndash;/.container-fluid&ndash;&gt;-->
+
+
+<div class="container-fluid"><!-- container-fluid -->
+    <div class="row"> <!--main row-->
+        <div class="col-md-5 col-xs-12"> <!--recent shares-->
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+                    <div class="col-md-3 col-xs-12">
+                        <img class="img-rounded img-responsive center-block profileImage"
+                             src="../resourse/profilePic.jpg">
+                    </div>
+                    <div class="col-md-9 col-xs-12 center-block">
+                        <div class="row"><!--username-->
+                            <div class="col-xs-6 col-md-6"><!--username-->
+                                <b class="">Mayank Agnihotri</b> <i>@Agni</i>
+                            </div><!--./username-->
+                        </div><!--/.username-->
+                        <div><!--content-->
+                            <br/>
+                        </div><!--/.content-->
+                        <div class="row"><!--import link-->
+                            <div class="col-xs-6 col-md-6"><!--socialConnect-->
+                                Subscriptions<br/>60
+                            </div><!--./socialConnect-->
+                            <div class="col-xs-6 col-md-6"><!--viewPost-->
+                                <a href="#" class="pull-right viewPost"> Topics <br/> 30</a>
+                            </div><!--./viewPost-->
+                        </div><!--/.import link-->
+                    </div>
+                </div>
+                <br/>
+            </div><!--recentPosts-->
+            <div class="panel panel-default"><!--topPosts-->
+                <div class="panel-heading" style="height: 50px;">
+                    <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Topic : </h4>
+                    <span class="input-group pull-right">
+                        <button type="submit" class="btn btn-default pull-left">
+                            <span class="glyphicon glyphicon-search">
+                                <span class="sr-only">Search</span>
+                            </span>
+                        </button>
+                        <input type="search" class="form-control" name="search" id="search"
+                               style="width: 170px; background-color: #e5e5e5;" placeholder="Search">
+                        <button type="reset" class="btn btn-default ">
+                            <span class="glyphicon glyphicon-remove">
+                                <span class="sr-only">Close</span>
+                            </span>
+                        </button>
+                    </span>
+
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12">
+                            <img class="img-rounded img-responsive center-block profileImage"
+                                 src="../resourse/profilePic.jpg">
+                        </div>
+
+                        <div class="col-md-9 col-xs-12 center-block">
+                            <div class="row"><!--username-->
+                                <div class="col-xs-3 col-md-3"><!--username-->
+                                    <i>@Agni</i>
+                                </div><!--./username-->
+
+                                    <div class="col-xs-3 col-md-3 center-block"><!--socialConnect-->
+                                        Subscriptions<br/>60
+                                    </div><!--./socialConnect-->
+                                    <div class="col-xs-3 col-md-3 pull-right"><!--viewPost-->
+                                        <a href="#" class=" viewPost"> Topics <br/> 30</a>
+                                    </div><!--./viewPost-->
+
+                            </div><!--/.username-->
+                            <br/>
+                            <div class="row"><!--content-->
+                                <div class="col-xs-8 col-md-8"><!--searchBox-->
+                                    <input type="text" placeholder="Topic" style="width: 230px">
+                                </div><!--./searchBox-->
+                                <div class="col-xs-4 col-md-4"><!--button-->
+                                    <button class="pull-right">Save</button>
+                                </div><!--./button-->
+                            </div><!--/.content-->
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="glyphicon glyphicon-envelope envIcon" ></span>
+                        <span class=" glyphicon glyphicon-file envIcon"></span>
+                        <span class=" glyphicon glyphicon-trash envIcon"></span>
+
+                        <div class="dropdown dropdownBtn access"><!--access-->
+                            <button class="btn  dropdown-toggle " type="button" data-toggle="dropdown">Private
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                            </ul>
+                        </div><!--/.access-->
+
+                        <div class="dropdown dropdownBtn whySoSerious"><!--serious-->
+                            <button class="btn  dropdown-toggle " type="button" data-toggle="dropdown">Serious
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                            </ul>
+                        </div><!--/.serious-->
+                    </div>
+                </div>
+                <br/>
+                <div class="panel-footer">
+
+                </div>
+            </div>
+        </div><!--/.topPosts-->
+        <div class="col-md-7 col-xs-12"><!--right panel-->
+            <div class="row"><!--first row-->
+                <div class="panel panel-default"><!--login panel-->
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Profile</h3>
+                    </div>
+                    <div class="panel-body ">
+                        <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-4 col-xs-offset-1">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon3"
+                                      style="width: 150px;">First Name*</span>
+                                <input type="text" class="form-control" placeholder="First Name"
+                                       aria-describedby="basic-addon2">
+                            </div>
+                            <br/>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon4" style="width: 150px;">Last Name*</span>
+                                <input type="text" class="form-control" placeholder="Last Name"
+                                       aria-describedby="basic-addon2">
+                            </div>
+                            <br/>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon6" style="width: 150px;">Username*</span>
+                                <input type="text" class="form-control" placeholder="username"
+                                       aria-describedby="basic-addon2">
+                            </div>
+                            <br/>
+                            <div class="input-group inputField">
+
+                                        <span class="input-group-addon" id="basic-addon12" style="width: 150px;">Photo*</span>
+                                <div class="form-inline">
+                                        <input type="file" name="files[]" id="js-upload-files" multiple>
+                                    <br/>
+                                        <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+                                    </div>
+                            </div>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="btn-group pull-right">
+                            <button class="btn btn-default btn-sm" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                Update
+                            </button>
+                        </div>
+                    </div><!--/.Login panel-->
+                </div>
+            </div><!--/.first row-->
+            <div class="row"><!--second row-->
+                <div class="panel panel-default"><!--login panel-->
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Change Password</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-4 col-xs-offset-1">
+
+                            <div class="input-group ">
+                                <span class="input-group-addon" id="basic-addon2" style="width: 150px;">Password</span>
+                                <input type="password" class="form-control" placeholder="Password"
+                                       aria-describedby="basic-addon2">
+                            </div>
+                            <br/>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon8" style="width: 150px;">Confirm Password*</span>
+                                <input type="text" class="form-control" placeholder="Confirm Password"
+                                       aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="btn-group pull-right">
+                            <button class="btn btn-default btn-sm" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                Update
+                            </button>
+                        </div>
+                    </div><!--/.Login panel-->
+                </div>
+            </div><!--/.second row-->
+        </div><!--/.main row-->
+    </div>
+</div><!-- /.container-fluid -->
+</body>
+</html>
